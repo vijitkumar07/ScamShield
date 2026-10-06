@@ -1,135 +1,269 @@
-# ScamShield 🛡️
+# 🛡️ ScamShield
 
-ScamShield is an explainable scam message analyzer built using Python and OCR. It analyzes suspicious messages, identifies potential scam patterns, calculates a risk score, classifies the scam type, and explains why a message may be suspicious.
+**ScamShield** is an explainable scam-message analyzer built using **Python and Object-Oriented Programming (OOP)**. It analyzes suspicious messages, detects scam patterns, calculates a risk score, identifies the possible scam type, and explains why a message may be suspicious.
 
-## Features
+The application also supports **OCR-based screenshot analysis**, allowing users to upload a screenshot of a suspicious message and automatically extract its text for analysis.
 
-* Scam message analysis
-* Risk score calculation
-* Risk level classification
-* Scam type detection
-* Explainable red-flag detection
-* Safety recommendations
-* Screenshot-based scam analysis using OCR
-* Analysis history
-* Tkinter-based graphical user interface
-* CSV-based history storage
+---
 
-## Scam Types Detected
+## 🚀 Features
 
-* UPI / Payment Scam
-* Banking / KYC Scam
-* Job / Recruitment Scam
-* Prize / Reward Scam
-* Delivery Scam
-* Phishing Scam
+* 🔍 Scam message analysis
+* ⚠️ Rule-based risk scoring
+* 🧠 Explainable scam detection
+* 📊 Risk levels: LOW, MEDIUM, HIGH, CRITICAL
+* 🏷️ Scam-type classification
+* 💳 UPI / Payment scam detection
+* 🏦 Banking / KYC scam detection
+* 💼 Job / Recruitment scam detection
+* 🎁 Prize / Reward scam detection
+* 📦 Delivery scam detection
+* 🎣 Phishing detection
+* 🔗 Suspicious link detection
+* 🔐 OTP / PIN / payment request detection
+* 📷 Screenshot analysis using OCR
+* 📝 Automatic text extraction from screenshots
+* 📜 Scam analysis history
+* 🖥️ Desktop GUI using Tkinter
+* 🌙 Dark-themed cybersecurity interface
 
-## Risk Levels
+---
 
-* LOW
-* MEDIUM
-* HIGH
-* CRITICAL
+## 🧠 How It Works
 
-## How It Works
+ScamShield follows a rule-based analysis workflow:
 
-1. User enters a suspicious message or uploads a screenshot.
-2. ScamShield extracts and cleans the message text.
-3. The analyzer checks for suspicious patterns and red flags.
-4. A risk score is calculated based on detected indicators.
-5. The message is classified into a possible scam category.
-6. The system explains why the message is considered suspicious.
-7. Safety recommendations are provided to the user.
-8. Analysis results can be stored in the history for further analysis.
+```text
+User Message
+     ↓
+Text Cleaning
+     ↓
+Red Flag Detection
+     ↓
+Risk Score Calculation
+     ↓
+Scam Type Detection
+     ↓
+Risk Level
+     ↓
+Explanation
+     ↓
+Safety Recommendation
+```
 
-## OCR Screenshot Analysis
+The analyzer checks for suspicious indicators such as:
 
-ScamShield can analyze screenshots of suspicious messages using Optical Character Recognition (OCR).
+* Urgent language
+* Payment requests
+* OTP requests
+* Prize or reward claims
+* Account threats
+* Suspicious links
+* Financial keywords
+* Phishing patterns
 
-The screenshot text is extracted using OCR and passed to the same scam detection engine for analysis.
+---
 
-## Tech Stack
+## ⚠️ Risk Levels
 
-* Python
-* Object-Oriented Programming (OOP)
-* Tkinter
-* Pytesseract
-* OCR
-* Pandas
-* CSV
+| Risk Level      | Description                                        |
+| --------------- | -------------------------------------------------- |
+| 🟢 **LOW**      | Few or no suspicious indicators detected           |
+| 🟡 **MEDIUM**   | Some suspicious patterns detected                  |
+| 🟠 **HIGH**     | Multiple strong scam indicators detected           |
+| 🔴 **CRITICAL** | Highly suspicious or potentially dangerous message |
 
-## Screenshots
+---
 
-### Dashboard
+## 🏷️ Scam Types
 
-![ScamShield Dashboard](screenshots/dashboard.png)
+ScamShield can identify common scam categories including:
 
-### Scam Message Analysis
+* **UPI / Payment Scam**
+* **Banking / KYC Scam**
+* **Job / Recruitment Scam**
+* **Prize / Reward Scam**
+* **Delivery Scam**
+* **Phishing**
 
-![Scam Message Analysis](screenshots/analysis.png)
+---
 
-### OCR Screenshot Analysis
+## 📷 Screenshot OCR Analysis
 
-![OCR Screenshot Analysis](screenshots/ocr.png)
+ScamShield can analyze screenshots containing suspicious messages using **Optical Character Recognition (OCR)**.
 
-## Project Structure
+### Workflow
+
+```text
+Screenshot
+    ↓
+OCR Text Extraction
+    ↓
+Message Analyzer
+    ↓
+Risk Score
+    ↓
+Scam Type
+    ↓
+Explanation & Recommendation
+```
+
+This allows users to analyze suspicious messages from sources such as WhatsApp, SMS, email, or other messaging platforms without manually typing the message.
+
+---
+
+## 🖥️ Application Screenshots
+
+### 📊 Dashboard
+
+<p align="center">
+  <img src="screenshots/dashboard.png" alt="ScamShield Dashboard" width="900">
+</p>
+
+### 🔍 Scam Analysis
+
+<p align="center">
+  <img src="screenshots/scam-analysis.png" alt="ScamShield Scam Analysis" width="900">
+</p>
+
+### 📷 Screenshot OCR Analysis
+
+<p align="center">
+  <img src="screenshots/screenshot-ocr.png" alt="ScamShield OCR Analysis" width="900">
+</p>
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology              | Purpose                       |
+| ----------------------- | ----------------------------- |
+| **Python**              | Core application development  |
+| **OOP**                 | Modular application structure |
+| **Tkinter**             | Desktop GUI                   |
+| **Pytesseract**         | OCR text extraction           |
+| **Pillow (PIL)**        | Image processing              |
+| **Regular Expressions** | Pattern detection             |
+| **CSV**                 | Scam history storage          |
+| **Git & GitHub**        | Version control               |
+
+---
+
+## 📂 Project Structure
 
 ```text
 ScamShield/
 │
 ├── Scam_shield.py
 ├── gui.py
-├── screenshots/
-│   ├── dashboard.png
-│   ├── analysis.png
-│   └── ocr.png
+├── README.md
 ├── .gitignore
-└── README.md
+│
+└── screenshots/
+    ├── dashboard.png
+    ├── scam-analysis.png
+    └── screenshot-ocr.png
 ```
 
-## Installation
+---
 
-Clone the repository:
+## ⚙️ Installation
+
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/vijitkumar07/ScamShield.git
 ```
 
-Move into the project directory:
+### 2. Open the Project
 
 ```bash
 cd ScamShield
 ```
 
-Install the required Python packages:
+### 3. Install Required Python Packages
 
 ```bash
-pip install pillow pytesseract pandas
+pip install pillow pytesseract
 ```
 
-Make sure Tesseract OCR is installed and configured on your system.
+### 4. Install Tesseract OCR
 
-## Run the Application
+ScamShield uses **Tesseract OCR** to extract text from uploaded screenshots.
 
-Run the graphical interface:
+After installing Tesseract OCR, make sure the Tesseract installation path is correctly configured if required by your system.
+
+---
+
+## ▶️ Run the Application
+
+Start the desktop application using:
 
 ```bash
 python gui.py
 ```
 
-## Future Enhancements
+The ScamShield GUI will open and allow you to analyze suspicious messages or screenshots.
 
-* Power BI dashboard for scam risk analytics
-* Advanced analytics using Pandas
-* Visual analysis of scam patterns
-* Improved scam classification
-* Additional suspicious message patterns
-* Enhanced OCR processing
+---
 
-## Purpose
+## 🔎 Example
 
-ScamShield is designed as an educational and practical cybersecurity project to help users understand potentially suspicious messages and the common warning signs associated with online scams.
+### Suspicious Message
 
-## Disclaimer
+```text
+Congratulations! You won ₹50,000.
+Pay ₹499 immediately to claim your prize.
+Click here: http://example-link.com
+```
 
-ScamShield is an educational project and should not be considered a replacement for professional cybersecurity or law-enforcement services. Users should independently verify suspicious messages, links, payment requests, and other potentially fraudulent communications.
+### Detected Indicators
+
+The analyzer may detect:
+
+* 🎁 Prize / reward claim
+* 💳 Payment request
+* ⚠️ Urgent language
+* 🔗 Suspicious HTTP link
+
+Based on these indicators, ScamShield calculates a risk score and provides an explanation of why the message may be suspicious.
+
+---
+
+## 📊 Future Enhancements
+
+* 📈 Power BI dashboard for scam-risk analytics
+* 🐼 Advanced analytics using Pandas
+* 📊 Visual analysis of scam patterns
+* 🧠 Improved scam classification
+* 🔍 Additional suspicious message patterns
+* 📷 Enhanced OCR processing
+* 📜 More detailed historical analytics
+* 🤖 Machine-learning-based scam detection
+
+---
+
+## 🎯 Project Purpose
+
+The goal of ScamShield is to demonstrate how **Python, OOP, rule-based analysis, GUI development, and OCR** can be combined to create a practical cybersecurity-focused application.
+
+The project focuses on **explainable detection**, allowing users to understand not only that a message has been flagged, but also **which suspicious indicators caused the warning**.
+
+---
+
+## 👨‍💻 Author
+
+**Vijit Kumar**
+
+B.Tech – Computer Science & Engineering
+
+**GitHub:**
+https://github.com/vijitkumar07
+
+---
+
+## ⚠️ Disclaimer
+
+ScamShield is an educational and demonstration project. Its results should not be considered a guaranteed determination that a message is fraudulent or legitimate.
+
+Users should independently verify suspicious messages and should never share sensitive information such as **OTPs, PINs, passwords, banking credentials, or payment details** with untrusted sources.
